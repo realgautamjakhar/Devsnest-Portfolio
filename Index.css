@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+:root {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container > div > h2 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 3rem;
+    z-index: 1;
+    position: fixed;
+}
+
+.logo {
+    width: 100px;
+    margin-left:2rem ;
+    margin-right: auto;
+}
+.logo:hover {
+    cursor: pointer;
+}
+
+.scroll-btn {
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    border: none;
+    background-color: transparent;
+}
+header nav > a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.849);
+    margin-right: 2rem ;
+    font-weight: 700;
+}
+
+.mobile-nav,section.menu{
+    display: none;
+}
+
+#menu-btn {
+    display: block;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#menu-btn:hover{
+    color:rgb(255, 115, 0);
+}
+
+@media screen and (max-width: 800px) {
+    .default-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: revert;
+    }
+    section.menu{
+        display: revert;
+        z-index: 2;
+        height: 0px;
+        overflow: hidden;
+        background-color: white;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in .5s;
+    }
+    section.menu li{
+
+        font-size: 2rem;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        font-weight: 700;
+    }
+    section.menu li a{
+        text-decoration: none;
+    }
+    section.menu li a:visited{
+        color: black;
+    }
+    section.menu li a:hover{
+        color: rgb(255, 115, 0);
+    }
+
+    #close-btn{
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+        font-weight: 700;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+    }
+    #close-btn:hover{
+        color:rgb(255, 115, 0);
+    }
+
+}
+
+
+
+.intro {
+    background: url(images/pattern.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#profile-img {
+    border-radius: 50%;
+    padding: 16px;
+    width: 200px;
+    height: 200px;
+}
+
+.icons {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+    bottom: -8rem;
+    border: none;
+    border-radius: 50%;
+}
+.icons:hover {
+    box-shadow: 0px 0px 40px 0px rgb(255, 115, 0);
+    transition: all 1s;
+}
+
+.dynamic-text{
+    color: blue;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#hobbies ul{
+    list-style: none;
+
+}
+#hobbies li{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 1rem;
+}
+
+
+#about-me , #qualifications , #hobbies ,#skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    text-align: center;
+}
+
+
+#hobbies{
+    background:url(images/hobby.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#about-me p{
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.1);
+    max-width: 500px;
+
+}
+
+#about-me img , #qualifications img ,#hobbies img{
+    max-width: 200px;
+}
+#qualifications{
+    background:url(images/qualification.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+#qualifications h3{
+    margin-bottom: 0.5rem;
+    margin: 0;
+}
+#qualifications p{
+    margin: 0;
+}
+.qualifications-main{
+    padding: 0;
+}
+.qualifications-main > li {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+
+}
+.qualifications-main >li:hover{
+    box-shadow: 0px 0px 20px 0px rgba(255, 110, 20, 0.814);
+}
+.list-nested {
+    padding: 0;
+}
+.list-nested > li{
+    list-style: none;
+}
+
+/* Skills */
+
+.tech-skills {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 2rem;
+}
+
+.tech-skills div {
+    padding: 1rem;
+    min-width: 200px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+}
+.tech-skills div:hover{
+    box-shadow: 0px 0px 20px 0px rgba(255, 110, 20, 0.814);
+}
+.tech-skills ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.tech-skills li{
+    padding-bottom: 1rem;
+}
+.tech-skills li:last-child{
+    padding-bottom: revert;
+}
+
+@media screen and (max-width:800px) {
+    .tech-skills {
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+#contact {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    min-width: 344px;
+}
+#contact label{
+    margin-bottom: 1rem;
+}
+#contact form input,textarea {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-bottom: 2rem;
+    box-shadow:0px 0px 20px 0px rgba(0,0,0,0.1) ;
+}
+.submit-btn{
+    margin-top: 2rem;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}

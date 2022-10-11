@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://kit.fontawesome.com/eb4ca53a40.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      
+      <section class="menu">
+        <button id="close-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <nav>
+          <ul>
+            <li><a href="#about-me">Abouts</a></li>
+            <li><a href="#qualifications">Qualification</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+      <header>
+        <img class="logo" src="images/logo.png"/>
+        <nav class="default-nav">
+          <a href="#about-me">Abouts</a>
+          <a href="#qualifications">Qualification</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <nav class="mobile-nav">
+          <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+      </header>
+      <div class="intro" id="intro">
+        <img id="profile-img" src="images/profile.jpg" />
+        <h1>Hi, I'm Gautam</h1>
+
+        <p>I m <span id="dynamic-text" class="dynamic-text"></span></p>
+
+        <p class="socials-links">
+          <a href="https://www.linkedin.com/in/gautam-jakhar/">
+            <img class="icons" src="images/insta.svg"
+          /></a>
+          <a href="https://www.linkedin.com/in/gautam-jakhar/">
+            <img class="icons" src="images/linkedin.svg"
+          /></a>
+          <a href="https://www.linkedin.com/in/gautam-jakhar/">
+            <img class="icons" src="images/facebook.svg"
+          /></a>
+          <a href="https://www.linkedin.com/in/gautam-jakhar/">
+            <img class="icons" src="images/github.svg"
+          /></a>
+        </p>
+        <button class="scroll-btn">Scroll Down -></button>
+      </div>
+
+      <div id="about-me">
+        <img src="images/about-me.svg" />
+        <h2>About ME</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
+          nisi neque deleniti vitae tenetur perspiciatis, officia, quas impedit
+          dicta nesciunt labore sequi doloremque. Delectus ab quo eius,
+          accusamus laboriosam voluptate.
+        </p>
+      </div>
+
+      <div id="qualifications">
+        <img src="images/study.svg" />
+        <h2>Qualification</h2>
+        <ul class="qualifications-main">
+          <li><i class="fa-solid fa-school"></i><h3>School</h3>St.Mary School</li>
+          <li><i class="fa-solid fa-graduation-cap"></i><h3>Bechlors</h3>Rajasthan University</li>
+          <li><i class="fa-solid fa-building-columns"></i><h3>Masters</h3>Rajasthan Technical University</li>
+          <li><i class="fa-solid fa-certificate"></i><h3>Other Cerification</h3>
+              <ul class="list-nested">
+                <li>Devsnest</li>
+                <li>Almabetter</li>
+                <li>IBM Cloud</li>
+              </ul>
+          </li>
+        </ul>
+
+      </div>
+      
+      <div id="skills">
+        <h2>Technologies Skills</h2>
+        <div class="tech-skills">
+          <div class="frontend background-svg">
+            <h3>Frontend</h3>
+            <ul>
+              <li><i class="fa-solid fa-code"></i> HTML</li>
+              <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+              <li><i class="fa-brands fa-sass"></i> SASS</li>
+              <li><i class="fa-brands fa-react"></i> React</li>
+            </ul>
+          </div>
+          <div class="backend background-svg">
+            <h3>Backend</h3>
+            <ul>
+              <li><i class="fa-brands fa-python"></i> Python</li>
+              <li><i class="fa-brands fa-square-js"></i> Javascript</li>
+              <li><i class="fa-brands fa-node"></i> Nodejs</li>
+            </ul>
+          </div>
+          <div class="Miscellaneous background-svg">
+            <h3>Miscellaneous</h3>
+            <ul>
+              <li><i class="fa-solid fa-photo-film"></i> Photo Editing</li>
+              <li><i class="fa-solid fa-video"></i> VideoEditing</li>
+              <li><i class="fa-solid fa-tachograph-digital"></i> Digital Marketing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="hobbies">
+        <img src="images/hobby.svg" />
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Video Games</li>
+          <li>Watching Movies</li>
+          <li>Learn Something New about Tech</li>
+        </ul>
+
+      </div>
+
+      <div id="contact">
+        <h2> Contact Me</h2>
+        <p>Drop a message</p>
+        <form method="post">
+          <label for="fname">First Name: </label>
+          <input type="text" id="fanme" name="fname">
+          <label for="lname">last Name:</label>
+          <input type="text" id="lname" name="lname">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="10"  cols="10"></textarea>
+          <input type="submit" class="submit-btn">
+        </form>
+      </div>
+      <footer>
+        MADE WITH ❤️
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
