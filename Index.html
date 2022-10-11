@@ -36,7 +36,7 @@
           <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
         </nav>
       </header>
-      <div class="intro" id="intro">
+      <div class="intro flex-center" id="intro">
         <img id="profile-img" src="images/profile.jpg" />
         <h1>Hi, I'm Gautam</h1>
 
@@ -44,23 +44,22 @@
 
         <p class="socials-links">
           <a href="https://www.linkedin.com/in/gautam-jakhar/">
-            <img class="icons" src="images/insta.svg"
-          /></a>
+            <i class="fa-solid fa-globe icons"></i></a>
           <a href="https://www.linkedin.com/in/gautam-jakhar/">
-            <img class="icons" src="images/linkedin.svg"
-          /></a>
+            <i class="fa-brands fa-instagram icons"></i></a>
           <a href="https://www.linkedin.com/in/gautam-jakhar/">
-            <img class="icons" src="images/facebook.svg"
-          /></a>
+            <i class="fa-brands fa-github icons"></i></a>
           <a href="https://www.linkedin.com/in/gautam-jakhar/">
-            <img class="icons" src="images/github.svg"
-          /></a>
+            <i class="fa-brands fa-facebook icons"></i></a>
+          <a href="https://www.linkedin.com/in/gautam-jakhar/">   
+            <i class="fa-brands fa-linkedinicons"></i></a>
+
         </p>
-        <button class="scroll-btn">Scroll Down -></button>
+        <p><i class="fa-solid fa-down-long downicon"></i></p>
       </div>
 
-      <div id="about-me">
-        <img src="images/about-me.svg" />
+      <div id="about-me" class="flex-center">
+        <img class="top-img" src="images/about-me.svg" />
         <h2>About ME</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
@@ -71,7 +70,7 @@
       </div>
 
       <div id="qualifications">
-        <img src="images/study.svg" />
+        <img class="top-img" src="images/study.svg" />
         <h2>Qualification</h2>
         <ul class="qualifications-main">
           <li><i class="fa-solid fa-school"></i><h3>School</h3>St.Mary School</li>
@@ -85,13 +84,14 @@
               </ul>
           </li>
         </ul>
-
+        <button class="default-btn"><i class="fa-sharp fa-solid fa-download"></i> Download Resume</button>
       </div>
       
       <div id="skills">
+        <img class="top-img" src="images/skills.svg" />
         <h2>Technologies Skills</h2>
         <div class="tech-skills">
-          <div class="frontend background-svg">
+          <div class="frontend">
             <h3>Frontend</h3>
             <ul>
               <li><i class="fa-solid fa-code"></i> HTML</li>
@@ -100,7 +100,7 @@
               <li><i class="fa-brands fa-react"></i> React</li>
             </ul>
           </div>
-          <div class="backend background-svg">
+          <div class="backend ">
             <h3>Backend</h3>
             <ul>
               <li><i class="fa-brands fa-python"></i> Python</li>
@@ -108,7 +108,7 @@
               <li><i class="fa-brands fa-node"></i> Nodejs</li>
             </ul>
           </div>
-          <div class="Miscellaneous background-svg">
+          <div class="Miscellaneous">
             <h3>Miscellaneous</h3>
             <ul>
               <li><i class="fa-solid fa-photo-film"></i> Photo Editing</li>
@@ -118,19 +118,49 @@
           </div>
         </div>
       </div>
+      <div class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+          <div class="project-card">
+            <img src="images/projects/project-advice.png" class="project-img">
+            <h3 class="project-name">Advice Web App</h3>
+            <p class="project-des"> A responsive advice generator app built with html css js</p>
+            <div class="project-btn"><button class="github-btn"><a href="" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button><button class="live-btn"><a href="" target="_blank"><i class="fa-solid fa-globe"></i> Live</a></button></div>
+          </div>
+          <div class="project-card">
+            <img src="images/projects/currency-converter.png" class="project-img">
+            <h3 class="project-name">Currency Converter</h3>
+            <p class="project-des"> Responsive Currency Converter app which convert currency between two different currencies. Uses APILAYER Exchange API</p>
+            <div class="project-btn"><button class="github-btn"><i class="fa-brands fa-github"></i> Github</button><button class="live-btn"><i class="fa-solid fa-globe"></i> Live</button></div>
+          </div>
+          <div class="project-card">
+            <img src="images/projects/team.png" class="project-img">
+            <h3 class="project-name">Team page</h3>
+            <p class="project-des"> Team page with grids</p>
+            <div class="project-btn"><button class="github-btn"><i class="fa-brands fa-github"></i> Github</button><button class="live-btn"><i class="fa-solid fa-globe"></i> Live</button></div>
+          </div>
+          <div class="project-card">
+            <img src="images/projects/todolist.png" class="project-img">
+            <h3 class="project-name">Todo List</h3>
+            <p class="project-des">A web App to store all the to do tasks. Store all the information in local device storage</p>
+            <div class="project-btn"><button class="github-btn"><i class="fa-brands fa-github"></i> Github</button><button class="live-btn"><i class="fa-solid fa-globe"></i> Live</button></div>
+          </div>
 
+        </div>
+      </div>
       <div id="hobbies">
-        <img src="images/hobby.svg" />
+        <img class="top-img" src="images/hobby.svg" />
         <h2>Hobbies</h2>
         <ul>
-          <li>Video Games</li>
-          <li>Watching Movies</li>
-          <li>Learn Something New about Tech</li>
+          <li class="hobby1"><p>Video Games</p></li>
+          <li class="hobby2"><p>Movies and Tv Series</p></li>
+          <li class="hobby3"><p>Coding and Learning about new technologies</p></li>
         </ul>
 
       </div>
 
       <div id="contact">
+        <img class="top-img" src="images/contact.svg" />
         <h2> Contact Me</h2>
         <p>Drop a message</p>
         <form method="post">

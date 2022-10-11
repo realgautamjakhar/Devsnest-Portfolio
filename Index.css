@@ -8,20 +8,59 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    font-family: 'Poppins', sans-serif;
+.flex-center{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.container > div > h2 {
+.intro {
+    min-height: 100vh;
+}
+
+#profile-img {
+    border-radius: 50%;
+    padding: 16px;
+    width: 200px;
+    height: 200px;
+}
+
+.icons {
+    padding: .5rem;
+    font-size: 1.5rem;
+    margin: auto;
     text-align: center;
+    color: black;
+}
+.icons:hover{
+    color: #fb6c6d;
 }
 
+.dynamic-text{
+    color: #fb6c6d;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.downicon {
+    font-size: 1.5rem;
+    color: black;
+}
+.downicon:hover {
+    font-size: 2rem;
+    color: #fb6c6d;
+    transition: all ease-in-out .5s;
+}
+
+
+.top-img{
+    max-width: 200px;
+}
 header {
     display: flex;
     width: 100%;
     align-items: center;
-    height: 3rem;
-    z-index: 1;
+    height: 4rem;
     position: fixed;
 }
 
@@ -33,21 +72,20 @@ header {
 .logo:hover {
     cursor: pointer;
 }
-
-.scroll-btn {
-    text-transform: uppercase;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 5rem;
-    right: 0;
-    border: none;
-    background-color: transparent;
+.default-nav {
+    margin-right: 2rem;
 }
+
+
 header nav > a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.849);
+    color: #000000;
     margin-right: 2rem ;
     font-weight: 700;
+}
+header nav >a:hover{
+    color: #fb6c6d;
+    transition: all ease-in-out .5s;
 }
 
 .mobile-nav,section.menu{
@@ -59,12 +97,13 @@ header nav > a {
     font-weight: 700;
     background: transparent;
     border: none;
-    margin-right: 1rem;
+    margin-right: 2rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
 #menu-btn:hover{
     color:rgb(255, 115, 0);
+    transition: all ease-in-out .5s;
 }
 
 @media screen and (max-width: 800px) {
@@ -119,66 +158,8 @@ header nav > a {
 
 }
 
-
-
-.intro {
-    background: url(images/pattern.png);
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center;
-    height: 100vh;
-    /* background-color: aquamarine; */
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-#profile-img {
-    border-radius: 50%;
-    padding: 16px;
-    width: 200px;
-    height: 200px;
-}
-
-.icons {
-    position: relative;
-    width: 2rem;
-    height: 2rem;
-    padding: 1rem;
-    bottom: -8rem;
-    border: none;
-    border-radius: 50%;
-}
-.icons:hover {
-    box-shadow: 0px 0px 40px 0px rgb(255, 115, 0);
-    transition: all 1s;
-}
-
-.dynamic-text{
-    color: blue;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-#hobbies ul{
-    list-style: none;
-
-}
-#hobbies li{
-    border: 1px solid black;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    font-weight: 700;
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 1rem;
-}
-
-
-#about-me , #qualifications , #hobbies ,#skills {
-    height: 100vh;
+#about-me , #qualifications , #hobbies ,#skills,#contact {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,31 +168,14 @@ header nav > a {
     text-align: center;
 }
 
-
-#hobbies{
-    background:url(images/hobby.png);
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center;
-}
-
 #about-me p{
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 1rem;
-    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
     max-width: 500px;
-
 }
 
-#about-me img , #qualifications img ,#hobbies img{
-    max-width: 200px;
-}
-#qualifications{
-    background:url(images/qualification.png);
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center;
-}
+
 #qualifications h3{
     margin-bottom: 0.5rem;
     margin: 0;
@@ -228,7 +192,6 @@ header nav > a {
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-
 }
 .qualifications-main >li:hover{
     box-shadow: 0px 0px 20px 0px rgba(255, 110, 20, 0.814);
@@ -240,14 +203,31 @@ header nav > a {
     list-style: none;
 }
 
-/* Skills */
+.default-btn{
+    background-color:#fb6c6d;;
+    color: white;
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1rem ;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    border-radius: .5rem;
+    border: none;
+}
+.default-btn:hover{
+    background-color:#fb6c6d;;
+    /* color: black; */
+    padding: 1rem 1rem 1rem 1rem;
+    transition: all ease-in-out 1s;
+    letter-spacing: revert;
 
+}
+
+/* Skills */
 .tech-skills {
     display: grid;
     grid-template-columns: repeat(3,auto);
     gap: 2rem;
 }
-
 .tech-skills div {
     padding: 1rem;
     min-width: 200px;
@@ -268,32 +248,181 @@ header nav > a {
 .tech-skills li:last-child{
     padding-bottom: revert;
 }
-
 @media screen and (max-width:800px) {
     .tech-skills {
         display: grid;
         grid-template-rows: repeat(3,1fr);
         grid-template-columns: 1fr;
     }
+    #hobbies ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 
 }
 
-
-#contact {
-    height: 100vh;
+.projects{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
+.project-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 2rem;
+}
+.project-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    height: max-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.project-img {
+    max-width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.project-name{
+    font-size: 1.2rem;
+    margin: 0;
+}
+.project-des{
+    margin:0;
+    font-size: .8rem;
+    /* color: rgba(255, 255, 255, 0.753); */
+    overflow: hidden;
+}
+.project-btn {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.project-btn a:visited{
+    color: revert;
+}
+.project-btn a{
+    text-decoration: none;
+    color: revert;
+}
+.project-btn a:hover{
+    color: revert;
+}
+
+
+@media screen and (max-width:800px) {
+    .project-container {
+        display: grid;
+        justify-items: center;
+        grid-template-rows: repeat(1,1fr);
+        grid-template-columns: 1fr;
+    }
+}
+
+.github-btn{
+    background-color: transparent;
+    padding: .4rem;
+    border: none;
+    font-size: .8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.live-btn{
+    background-color: #fb6c6d;
+    color: white;
+    padding: .4rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: .8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.github-btn:hover,.live-btn:hover{
+    letter-spacing: .2rem;
+    transition: all ease-in .5s;
+}
+
+
+
+
+
+
+#hobbies ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+#hobbies li{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.hobby1 {
+    background: url(images/games.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hobby2 {
+    background: url(images/movies.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hobby3 {
+    background: url(images/coding.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hobbies ul li p{
+    background: rgba(0, 0, 0, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 2rem;
+    font-weight: 500;
+} 
+
+
 #contact form{
     display: flex;
     flex-direction: column;
     min-width: 344px;
+    margin-top: 2rem;
 }
 #contact label{
     margin-bottom: 1rem;
 }
+#contact h2{
+    margin-bottom: 0;
+}
+
 #contact form input,textarea {
     border: none;
     font-size: 1rem;

@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.scrollTop = 0; //for safari
     document.documentElement.scrollTop = 0; //for chrome windows
   }
-  document.querySelector(".scroll-btn").addEventListener("click",scrollpage)
+  document.querySelector(".downicon").addEventListener("click",scrollpage)
   function scrollpage(){
     console.log("scscsc")
-    document.documentElement.scrollBy(0,1000);
+    document.documentElement.scrollBy(0,740);
   }
 });
 
