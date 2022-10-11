@@ -125,8 +125,10 @@ header nav >a:hover{
         align-items: center;
         transition: all ease-in .5s;
     }
+    section.menu ul{
+        padding: 0;
+    }
     section.menu li{
-
         font-size: 2rem;
         list-style: none;
         padding: 0;
