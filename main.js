@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     r.style.setProperty("--box-shadow-hover","17px 17px 30px #a34647,-17px -17px 30px #2f2f32")
     r.style.setProperty("--day-icon","revert")
     r.style.setProperty("--night-icon","none")
+    console.log("jkasdfh")
   }
 
 
