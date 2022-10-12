@@ -1,6 +1,4 @@
 const dynamicContent = document.getElementById("dynamic-text");
-console.log(dynamicContent);
-console.log("helloooo");
 const phrases = ["Software Engineer...", "WebDeveloper..."];
 let phraseIndex = 0;
 let letterIndex = 0;
