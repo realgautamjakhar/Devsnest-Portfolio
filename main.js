@@ -70,6 +70,34 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("scscsc")
     document.documentElement.scrollBy(0,740);
   }
+
+  const day = document.getElementById("day");
+  const night = document.getElementById("night");
+  var r = document.querySelector(':root');
+
+  day.addEventListener("click",daymode)
+  night.addEventListener("click",nightmode)
+  
+  function daymode(){
+    r.style.setProperty("--bg-color","#ffffff")
+    r.style.setProperty("--text-color","black")
+    r.style.setProperty("--shadow-box-background","#ffffff")
+    r.style.setProperty("--shadow-box-box-shadow","17px 17px 30px #a6a6a6,-17px -17px 30px #ffffff")
+    r.style.setProperty("--box-shadow-hover","17px 17px 30px #eb696c,-17px -17px 30px #ffffff")
+    r.style.setProperty("--day-icon","none")
+    r.style.setProperty("--night-icon","revert")
+  }
+  function nightmode(){
+    r.style.setProperty("--bg-color","#232325")
+    r.style.setProperty("--text-color","white")
+    r.style.setProperty("--shadow-box-background","#232325")
+    r.style.setProperty("--shadow-box-box-shadow","17px 17px 30px #171718,-17px -17px 30px #2f2f32")
+    r.style.setProperty("--box-shadow-hover","17px 17px 30px #a34647,-17px -17px 30px #2f2f32")
+    r.style.setProperty("--day-icon","revert")
+    r.style.setProperty("--night-icon","none")
+  }
+
+
 });
 
 printletters(phrases[phraseIndex]);
