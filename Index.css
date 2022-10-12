@@ -22,9 +22,11 @@
     --padding-xl:5rem;
 
     --min-width:300px;
+    /* 10px 10px 20px #a34647,
+    -10px -10px 20px #ff9293; */
 
     --box-shadow-op-bg:rgba(0,0,0,0.1);
-    --box-shadow-hover:17px 17px 30px #a34647,
+    --box-shadow-hover:10px 10px 20px #a34647,
     -17px -17px 30px #2f2f32;
     --hover-transition:all ease-in-out .4s;
 
@@ -35,8 +37,8 @@
     --text-color:black;
     --bg-color:#ffffff;
     --shadow-box-background:#ffffff;
-    --shadow-box-box-shadow:17px 17px 30px #a6a6a6,
-    -17px -17px 30px #ffffff;
+    --shadow-box-box-shadow:10px 10px 20px #a6a6a6,
+    -10px -10px 20px #ffffff;
     --box-shadow-hover:17px 17px 30px #eb696c,
     -17px -17px 30px #ffffff;
     --day-icon:none;
@@ -151,6 +153,7 @@ header {
 }
 
 .logo {
+    color: var(--text-color);
     width: 100px;
     margin-left:2rem;
     margin-right:auto;
