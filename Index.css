@@ -32,24 +32,26 @@
 
     /* DAY */
 
-    /* --text-color:black;
+    --text-color:black;
     --bg-color:#ffffff;
     --shadow-box-background:#ffffff;
     --shadow-box-box-shadow:17px 17px 30px #a6a6a6,
     -17px -17px 30px #ffffff;
     --box-shadow-hover:17px 17px 30px #eb696c,
-    -17px -17px 30px #ffffff; */
+    -17px -17px 30px #ffffff;
+    --day-icon:none;
+    --night-icon:revert;
 
 
     /* NIGHT */
 
-    --text-color:white;
+    /* --text-color:white;
     --bg-color:#232325;
     --shadow-box-background:#232325;
     --shadow-box-box-shadow:17px 17px 30px #171718,
     -17px -17px 30px #2f2f32;
     --box-shadow-hover:17px 17px 30px #a34647,
-    -17px -17px 30px #2f2f32;
+    -17px -17px 30px #2f2f32; */
 }
 
 body {
@@ -130,6 +132,22 @@ header {
     align-items: center;
     height: 4rem;
     position: fixed;
+}
+
+.modes{
+    position:fixed;
+    bottom:1rem;
+    left: 1rem;
+    font-size: var(--font-large);
+    color: var(--text-color);
+    margin: 1rem;
+}
+
+#day{
+    display: var(--day-icon);
+}
+#night{
+    display: var(--night-icon);
 }
 
 .logo {
