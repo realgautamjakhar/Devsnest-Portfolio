@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+.qualification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+.qualification-cards {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(auto,200px));
+    grid-template-rows: repeat(4,minmax(auto,auto));
+    grid-template-areas: "school school certificate certificate"
+                        "school school certificate certificate"
+                            "school school unknown unknown"
+                            "school school unknown unknown";
+    gap: 2rem;
+}
+.qualification-cards > div{
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.schooling {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    grid-area: school;
+}
+.schooling-card p,h2,h3,h4,h5{
+    margin: 0;
+}
+.schooling-card p{
+    opacity: 70%;
+}
+.line-icon-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--accent-color);
+}
+.certificate-cards{
+    grid-area:certificate;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.certificate-cards .logos{
+    width: auto;
+    height: 50px;
+}
+.certificate-logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.unknown-cards{
+    grid-area:unknown;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.resume-btn{
+    background-color: var(--accent-color);
+    border:none;
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+    width: max-content;
+    border-radius: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.resume-btn:hover{
+    background-color: rgba(251, 108, 108, 0.7);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+@media screen and (max-width:700px) {
+    .qualification-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        width: auto;
+        grid-template-areas:"school"
+        "certificate"
+        "unknown";
+    }
+}

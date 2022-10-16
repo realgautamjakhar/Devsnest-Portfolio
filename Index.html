@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" type="image/ico" sizes="32x32" href="images/logo1.png">
     <script src="https://kit.fontawesome.com/eb4ca53a40.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="qualification.css">
   </head>
   <body>
     <div class="container">
@@ -74,56 +76,75 @@
           accusamus laboriosam voluptate.
         </p>
       </div>
-
-      <div id="qualifications" class="flex-center">
+      <section class="qualification" id="qualifications">
         <img class="top-img" src="images/study.svg" />
-        <h2 class="section-heading">Qualification</h2>
-        <ul class="qualifications-main">
-          <li><i class="fa-solid fa-school qualifications-icons"></i><h3>School</h3>St.Mary School</li>
-          <li><i class="fa-solid fa-graduation-cap qualifications-icons"></i><h3>Bechlors</h3>Rajasthan University</li>
-          <li><i class="fa-solid fa-building-columns qualifications-icons"></i><h3>Masters</h3>Rajasthan Technical University</li>
-          <li><i class="fa-solid fa-certificate qualifications-icons"></i><h3>Other Cerification</h3>
-              <ul class="list-nested">
-                <li>Devsnest</li>
-                <li>Almabetter</li>
-                <li>IBM Cloud</li>
-              </ul>
-          </li>
-        </ul>
-        <button class="default-btn"><i class="fa-sharp fa-solid fa-download"></i> Download Resume</button>
-      </div>
-      
-      <div id="skills" class="flex-center">
-        <img class="top-img" src="images/skills.svg" />
-        <h2 class="section-heading">Technologies Skills</h2>
-        <div class="tech-skills">
-          <div class="frontend">
-            <h3>Frontend</h3>
-            <ul>
-              <li><i class="fa-solid fa-code"></i> HTML</li>
-              <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-              <li><i class="fa-brands fa-sass"></i> SASS</li>
-              <li><i class="fa-brands fa-react"></i> React</li>
-            </ul>
-          </div>
-          <div class="backend ">
-            <h3>Backend</h3>
-            <ul>
-              <li><i class="fa-brands fa-python"></i> Python</li>
-              <li><i class="fa-brands fa-square-js"></i> Javascript</li>
-              <li><i class="fa-brands fa-node"></i> Nodejs</li>
-            </ul>
-          </div>
-          <div class="Miscellaneous">
-            <h3>Miscellaneous</h3>
-            <ul>
-              <li><i class="fa-solid fa-photo-film"></i> Photo Editing</li>
-              <li><i class="fa-solid fa-video"></i> VideoEditing</li>
-              <li><i class="fa-solid fa-tachograph-digital"></i> Digital Marketing</li>
-            </ul>
-          </div>
+        <h1>Qualification</h1>
+        <div class="qualification-cards">
+            <div class="schooling">
+                <h2 class="line-icon-flex" style="align-self: center;"><i class="fa-sharp fa-solid fa-book-skull"></i>Schooling</h2>
+                <div class="schooling-card">
+                    <h5>Till 2018</h5>
+                    <div class="line-icon-flex">
+                        <i class="fa-solid fa-school qualifications-icons"></i>
+                        <h3>School</h3>
+                    </div>
+                    <h3>ST. MARY SR SEC SCHOOL-SIKAR</h3>
+                    <p>Class X - 84% ICSE Class XI 70% ISC</p>
+                </div>
+                <div class="schooling-card">
+                    <h5>2018 - 2021</h5>
+                    <div class="line-icon-flex">
+                        <i class="fa-solid fa-graduation-cap qualifications-icons"></i>
+                        <h3>College - Bechlores</h3>
+                    </div>
+                    <h3>Rajasthan University</h3>
+                    <p>Affl. Poddar International College -Jaipur</p>
+                    <p>ABOVE 82% EVERY SEM</p>
+                </div>
+                <div class="schooling-card">
+                    <h5>2021 - Present</h5>
+                    <div class="line-icon-flex">
+                        <i class="fa-solid fa-building-columns qualifications-icons"></i>
+                        <h3>College - Masters</h3>
+                    </div>
+                    <h3>Rajasthan Technical University</h3>
+                    <p>Affl. Poddar International College -Jaipur</p>
+                    <p>9+ CGPA</p>
+                </div>
+            </div>
+            <div class="certificate-cards">
+                <h3 class="line-icon-flex"><i class="fa-solid fa-certificate"></i>Certification</h3>
+                <div class="certificate-logo">
+                    <img src="logos/devsnest.png" class="logos" title="Devsnest Full stack Webdevelopment">
+                    <img src="logos/download.png" class="logos" title="Almabetter Web 3 Full Stack Webdevelopment">
+                    <img src="logos/ibm.png" class="logos" title="IBM Full stack Cloud Development">    
+                </div>
+            </div>
+            <div class="unknown-cards">
+                <h3 class="line-icon-flex"><i class="fa-sharp fa-solid fa-file"></i>Resume</h3>
+                <button class="resume-btn">Download Resume</button>
+            </div>
         </div>
-      </div>
+    </section>
+      <section class="skills" id="skills">
+        <img class="top-img" src="images/skills.svg" />
+        <h1>TECHNOLOGIES SKILLS</h1>
+        <div class="tiles">
+            <div class="html" title="HTML"></div>
+            <div class="css" title="CSS"></div>
+            <div class="js" title="Javascript"></div>
+            <div class="sass" title="Sass"></div>
+            <div class="python" title="Python"></div>
+            <div class="react" title="React"></div>
+            <div class="nodejs" title="Nodejs"></div>
+            <div class="redux" title="Redux"></div>
+            <div class="mongodb" title="MongoDB"></div>
+            <div class="graphql" title="GraphQL"></div>
+            <div class="sanity" title="Sanity"></div>
+            <div class="git" title="Git"></div>
+        </div>
+    </section>
+
       <div class="projects flex-center" id="projects">
         <h2 class="section-heading">Projects</h2>
         <p>Projects I worked or working on!</p>
@@ -180,7 +201,6 @@
           <li ><i class="fa-sharp fa-solid fa-code"> Coding</i></li>
           <li ><i class="fa-sharp fa-solid fa-video"> Watching Movies</i></li>
         </ul>
-
       </div>
 
       <div id="contact" class="flex-center">

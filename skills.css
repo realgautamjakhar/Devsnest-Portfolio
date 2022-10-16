@@ -1,0 +1,146 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.tiles{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: repeat(4,minmax(auto,100px));
+    grid-template-columns: repeat(5,minmax(auto,100px));
+    grid-template-areas:"html html css js js"
+                        "html html python python react"
+                        "redux graphql mongodb nodejs nodejs"
+                        "sanity sass git nodejs nodejs";
+
+    gap: 2rem;
+    text-align: center;
+    grid-auto-flow: dense;
+}
+.tiles div {
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: center;
+    text-transform: uppercase;
+    filter:grayscale(1);
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--shadow-box-background);
+    box-shadow: var(--shadow-box-box-shadow);
+}
+.tiles div:hover{
+    filter:grayscale(0);
+    box-shadow: var(--box-shadow-hover);
+    transition: var(--hover-transition);
+}
+.html{
+    grid-area: html;
+    background-image:url(/logos/html.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.css{
+    grid-area: css;
+    background-image: url(/logos/css.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.js{
+    grid-area: js;
+    background-image: url(logos/js.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.python{
+    grid-area: python;
+    background-image: url(/logos/python.png);
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.react{
+    grid-area: react;
+    background-image: url(/logos/react.png);
+    background-color: #A8E890;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.redux{
+    grid-area: redux;
+    background-image: url(/logos/redux.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.mongodb{
+    grid-area: mongodb;
+    background-image: url(/logos/mongodb.webp);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.sass{
+    grid-area: sass;
+    background-image: url(/logos/sass.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.nodejs {
+    grid-area: nodejs;
+    background-image: url(logos/nodejs.png);
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+}
+.sanity{
+    grid-area: sanity;
+    background-image: url(/logos/exghybvcvdmerns27fff.webp);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.git{
+    grid-area: git;
+    background-image: url(/logos/git.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.graphql{
+    grid-area: graphql;
+    background-image: url(/logos/graphql.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width:600px) {
+    .tiles {
+        display: grid;
+        grid-template-rows: repeat(7,minmax(auto,80px));
+        grid-template-columns: repeat(3,minmax(auto,80px));
+        grid-template-areas:"html html css "
+                            "html html react"
+                            "js js sass"
+                            "graphql python python"
+                            "redux nodejs nodejs"
+                            "sanity nodejs nodejs"
+                            "git git mongodb ";
+        gap: 2rem;
+        transition: all 1s;
+        text-align: center;
+        grid-auto-flow: dense;
+    }
+}
+
+

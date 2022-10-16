@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   document.querySelector(".downicon").addEventListener("click",scrollpage)
   function scrollpage(){
-    console.log("scscsc")
+
     document.documentElement.scrollBy(0,740);
   }
 
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
     r.style.setProperty("--bg-color","#ffffff")
     r.style.setProperty("--text-color","black")
     r.style.setProperty("--shadow-box-background","#ffffff")
-    r.style.setProperty("--shadow-box-box-shadow","17px 17px 30px #a6a6a6,-17px -17px 30px #ffffff")
-    r.style.setProperty("--box-shadow-hover","17px 17px 30px #eb696c,-17px -17px 30px #ffffff")
+    r.style.setProperty("--shadow-box-box-shadow","5px 5px 16px #737373,-5px -5px 16px #ffffff")
+    r.style.setProperty("--box-shadow-hover","5px 5px 16px #fb6c6d,-5px -5px 16px #ffffff")
     r.style.setProperty("--day-icon","none")
     r.style.setProperty("--night-icon","revert")
   }
@@ -89,13 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     r.style.setProperty("--bg-color","#232325")
     r.style.setProperty("--text-color","white")
     r.style.setProperty("--shadow-box-background","#232325")
-    r.style.setProperty("--shadow-box-box-shadow","17px 17px 30px #171718,-17px -17px 30px #2f2f32")
-    r.style.setProperty("--box-shadow-hover","17px 17px 30px #a34647,-17px -17px 30px #2f2f32")
+    r.style.setProperty("--shadow-box-box-shadow","5px 5px 16px #101011,-5px -5px 16px #363639")
+    r.style.setProperty("--box-shadow-hover","5px 5px 16px #fb6c6d,-5px -5px 16px #363639")
     r.style.setProperty("--day-icon","revert")
     r.style.setProperty("--night-icon","none")
   }
-
-
 });
-
-printletters(phrases[phraseIndex]);
