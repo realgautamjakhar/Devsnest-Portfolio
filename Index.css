@@ -39,8 +39,7 @@
     --shadow-box-background:#ffffff;
     --shadow-box-box-shadow:5px 5px 16px #e6e6e6,
     -5px -5px 16px #ffffff;
-    --box-shadow-hover:17px 17px 30px #eb696c,
-    -17px -17px 30px #ffffff;
+    --box-shadow-hover:5px 5px 16px #fb6c6d,-5px -5px 16px #ffffff;
     --day-icon:none;
     --night-icon:revert;
 
