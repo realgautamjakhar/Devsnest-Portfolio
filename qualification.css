@@ -8,6 +8,7 @@
     align-items: center;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
+    margin-bottom: 2rem;
 }
 .qualification-cards {
     display: grid;

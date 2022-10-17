@@ -1,8 +1,8 @@
+import projects from './projects.json' assert {type: 'json'};
 const dynamicContent = document.getElementById("dynamic-text");
 const phrases = ["Software Engineer...", "WebDeveloper..."];
 let phraseIndex = 0;
 let letterIndex = 0;
-
 const typingspeed = 250;
 const clearingspeed = 150;
 
@@ -34,6 +34,29 @@ function clearLetters() {
     setTimeout(clearLetters, clearingspeed);
   }
 }
+
+//Search Function projects related things
+
+const options = document.querySelectorAll(".option")
+const container = document.querySelector(".cards-container")
+let allprojects = "";
+options.forEach(option =>{
+    option.addEventListener("click",()=>{
+        console.log(option);
+    })
+})
+function projecttags(tags){
+    let valuetags ="";
+    tags.forEach(tag=>{
+        let singletag = `<p>${tag}</p>`
+        valuetags += singletag
+    })
+    return valuetags
+}
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("menu-btn").addEventListener("click", showmenu);
@@ -94,4 +117,60 @@ document.addEventListener("DOMContentLoaded", function () {
     r.style.setProperty("--day-icon","revert")
     r.style.setProperty("--night-icon","none")
   }
+
+  //serach fcuntion
+  projects.forEach(project => {
+    const contain = 
+    `<div class="card">
+    <div class="img-div">
+        <img src="${project.projectimg}">
+    </div>
+    <h3>${project.projectname}</h3>
+    <p>${project.description}</p>
+    <div class="tags">${projecttags(project.tags)}</div>
+    <div class="buttons">
+        <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
+        <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i> live</a></button>
+    </div>
+    </div>`
+    allprojects += contain
+    container.innerHTML += contain
+    });
+    options.forEach((option) =>{
+      option.addEventListener("click",(e)=>{
+
+          options.forEach(opt =>{
+              opt.classList.remove("selectedoption")
+              opt.classList.add("notselectedoption")
+          })
+          const tagvalue =e.target.innerHTML;
+          container.innerHTML = ""
+          e.target.classList.remove("notselectedoption")
+          e.target.classList.add("selectedoption")
+
+          projects.forEach(project => {
+              project.tags.forEach(tag =>{
+                  if(tag === tagvalue){
+                      const contain = 
+                                      `<div class="card">
+                                      <div class="img-div">
+                                          <img src="${project.projectimg}">
+                                      </div>
+                                      <h3>${project.projectname}</h3>
+                                      <p>${project.description}</p>
+                                      <div class="tags">${projecttags(project.tags)}</div>
+                                      <div class="buttons">
+                                          <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
+                                          <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i> live</a></button>
+                                      </div>
+                                      </div>`
+                                      container.innerHTML += contain
+                  }else if(tagvalue === "ALL"){
+                      container.innerHTML = allprojects;
+                  }
+              })
+          })
+      })
+    })
+
 });

@@ -1,0 +1,58 @@
+[
+    {
+    "projectimg": "project-img/testimonials.png",
+    "projectname": "Testimonials Grid Page",
+    "description": "Simple Grid layout of testimonials page. Grid template area is used to develop the grids",
+    "githublink":"https://github.com/realgautamjakhar/testimonials-grid-section-main",
+    "livelink":"https://startling-gelato-e74531.netlify.app/",
+    "tags":["HTML","CSS"]
+    },
+    {
+    "projectimg": "project-img/devfinder.png",
+    "projectname": "Github User Find",
+    "description": "This app can tell you basic info of any GitHub username",
+    "githublink":"https://github.com/realgautamjakhar/GitHubUserSearchApp-main",
+    "livelink":"https://githubdevfinder56.netlify.app/",
+    "tags":["HTML","CSS","JS","API"]
+    },
+    {
+    "projectimg": "project-img/weather-app.png",
+    "projectname": "Weather App",
+    "description": "Weather App developed with the help of 3rd party API OpenweatherAPI",
+    "githublink":"https://github.com/realgautamjakhar/weather-app",
+    "livelink":"https://tiny-douhua-cac959.netlify.app/",
+    "tags":["HTML","CSS","JS","API"]
+    },
+    {
+    "projectimg": "project-img/project-advice.png",
+    "projectname": "Advice Web App",
+    "description": "A responsive advice generator app built with html css js",
+    "githublink":"https://github.com/realgautamjakhar/advice-generator-app-main",
+    "livelink":"https://getyourselfsomeadvice.netlify.app/",
+    "tags":["HTML","CSS","JS","API"]
+    },
+    {
+    "projectimg": "project-img/currency-converter.png",
+    "projectname": "Currency Converter",
+    "description": "Responsive Currency Converter app which convert currency between two different currencies. Uses APILAYER Exchange API",
+    "githublink":"https://github.com/realgautamjakhar/Currency_convertor",
+    "livelink":"https://currency-convertor-56.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/team.png",
+    "projectname": "Team page",
+    "description": "Team page with grids",
+    "githublink":"https://github.com/realgautamjakhar/my-team-page-master",
+    "livelink":"https://team-page-56.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/todolist.png",
+    "projectname": "Todo List",
+    "description": "A web App to store all the to do tasks. Store all the information in local device storage",
+    "githublink":"https://github.com/realgautamjakhar/Todo",
+    "livelink":"https://g1-todos.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    }
+]
