@@ -134,6 +134,7 @@ header {
     align-items: center;
     height: 4rem;
     position: fixed;
+    z-index: 22;
 }
 
 .modes{
