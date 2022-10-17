@@ -22,8 +22,6 @@
     --padding-xl:5rem;
 
     --min-width:300px;
-    /* 10px 10px 20px #a34647,
-    -10px -10px 20px #ff9293; */
 
     --box-shadow-op-bg:rgba(0,0,0,0.1);
     --box-shadow-hover:10px 10px 20px #a34647,
@@ -31,8 +29,6 @@
     --hover-transition:all ease-in-out .4s;
 
     --shadow-box-border-radius:8px;
-
-    /* DAY */
 
     --text-color:black;
     --bg-color:#ffffff;
@@ -42,23 +38,13 @@
     --box-shadow-hover:5px 5px 16px #fb6c6d,-5px -5px 16px #ffffff;
     --day-icon:none;
     --night-icon:revert;
-
-
-    /* NIGHT */
-
-    /* --text-color:white;
-    --bg-color:#232325;
-    --shadow-box-background:#232325;
-    --shadow-box-box-shadow:17px 17px 30px #171718,
-    -17px -17px 30px #2f2f32;
-    --box-shadow-hover:17px 17px 30px #a34647,
-    -17px -17px 30px #2f2f32; */
 }
 
 body {
     margin: 0;
     background-color: var(--bg-color);
     font-family: 'Poppins', sans-serif;
+    transition: all .5s;
 }
 /* Flex prop */
 .flex-center {
@@ -85,9 +71,14 @@ p{
 /* First Page (hero) */
 .intro {
     min-height: 100vh;
+    background-image: url(/1666019561497.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .intro h1{
     color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 #profile-img {
@@ -98,6 +89,7 @@ p{
 }
 
 .icons {
+    background-color: var(--bg-color);
     padding: var(--padding-regular);
     font-size: var(--font-large);
     margin: auto;
@@ -133,7 +125,8 @@ header {
     align-items: center;
     height: 4rem;
     position: fixed;
-    z-index: 22;
+    z-index: 1;
+    background-color: var(--bg-color);
 }
 
 .modes{
@@ -142,7 +135,9 @@ header {
     left: 1rem;
     font-size: var(--font-large);
     color: var(--text-color);
-    margin: 1rem;
+    z-index: 1;
+    text-align: center;
+    padding: .5rem;
 }
 
 #day{

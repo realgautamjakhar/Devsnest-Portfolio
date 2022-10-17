@@ -1,6 +1,7 @@
 import projects from './projects.json' assert {type: 'json'};
 const dynamicContent = document.getElementById("dynamic-text");
 const phrases = ["Software Engineer...", "WebDeveloper..."];
+
 let phraseIndex = 0;
 let letterIndex = 0;
 const typingspeed = 250;
@@ -34,6 +35,7 @@ function clearLetters() {
     setTimeout(clearLetters, clearingspeed);
   }
 }
+printletters(phrases[phraseIndex]);
 
 //Search Function projects related things
 
@@ -60,7 +62,6 @@ function projecttags(tags){
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("menu-btn").addEventListener("click", showmenu);
-
   function showmenu() {
     const menu = document.querySelector("section.menu");
     menu.style.height = "100%";
@@ -88,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   document.querySelector(".downicon").addEventListener("click",scrollpage)
   function scrollpage(){
-
     document.documentElement.scrollBy(0,740);
   }
 
