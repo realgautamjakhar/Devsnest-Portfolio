@@ -37,8 +37,8 @@
     --text-color:black;
     --bg-color:#ffffff;
     --shadow-box-background:#ffffff;
-    --shadow-box-box-shadow:10px 10px 20px #a6a6a6,
-    -10px -10px 20px #ffffff;
+    --shadow-box-box-shadow:5px 5px 16px #e6e6e6,
+    -5px -5px 16px #ffffff;
     --box-shadow-hover:17px 17px 30px #eb696c,
     -17px -17px 30px #ffffff;
     --day-icon:none;
