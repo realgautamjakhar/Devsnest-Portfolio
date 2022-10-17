@@ -1,4 +1,27 @@
-[
+[   {
+    "projectimg": "project-img/calc.png",
+    "projectname": "Calculator App",
+    "description": "A simple calculator app that supports standard arithmetic operations such as adding subtracting multiplying and dividing. This app is mobile responsive and supports three themes",
+    "githublink":"https://github.com/realgautamjakhar/calculator-app-main",
+    "livelink":"https://dashing-trifle-7fb8bb.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/fylo-page.png",
+    "projectname": "Fylo Website",
+    "description": "Fylo dark landing is a responsive website that supports desktop and mobile devices. have HTML inbuilt email validation",
+    "githublink":"https://github.com/realgautamjakhar/fylo-dark-theme-landing-page-master",
+    "livelink":"https://keen-florentine-a2e550.netlify.app/",
+    "tags":["HTML","CSS"]
+    },
+    {
+    "projectimg": "project-img/rating-page.png",
+    "projectname": "Intractive Rating Page",
+    "description": "Component use to get input from the user and on next section show rating and thank you note to the user. 100% Responsive design built with HTML CSS and vanilla JS",
+    "githublink":"https://github.com/realgautamjakhar/interactive-rating-component-main",
+    "livelink":"https://splendid-bubblegum-69e6a5.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
     {
     "projectimg": "project-img/testimonials.png",
     "projectname": "Testimonials Grid Page",
