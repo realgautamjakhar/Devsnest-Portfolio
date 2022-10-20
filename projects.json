@@ -1,4 +1,29 @@
-[   {
+[   
+    {
+    "projectimg": "project-img/password-generator.png",
+    "projectname": "Password Generator",
+    "description": " Generate passwords that contain uppercase/lowercase/numbers/symbols with a length of up to 30 letters.",
+    "githublink":"https://github.com/realgautamjakhar/password-generator-app-main",
+    "livelink":"https://unique-travesseiro-3f0e88.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/Interactive pricing component.png",
+    "projectname": "Interactive Price Component",
+    "description": " An interactive price component that tells how much price users have to pay for a specific amount of traffic on the webpage.",
+    "githublink":"https://github.com/realgautamjakhar/interactive-pricing-component-main",
+    "livelink":"https://clinquant-salmiakki-7f00a1.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/intro-section.png",
+    "projectname": "Intro Page with dropdown menu",
+    "description": " A page with a dropdown menu to showcase some more details/links to different pages of the website.",
+    "githublink":"https://github.com/realgautamjakhar/intro-section-with-dropdown-navigation-main",
+    "livelink":"https://intro-section-dropdown56.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
     "projectimg": "project-img/calc.png",
     "projectname": "Calculator App",
     "description": "A simple calculator app that supports standard arithmetic operations such as adding subtracting multiplying and dividing. This app is mobile responsive and supports three themes",
