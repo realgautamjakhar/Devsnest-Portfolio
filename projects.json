@@ -1,4 +1,29 @@
 [   
+
+    {
+    "projectimg": "project-img/spotify.png",
+    "projectname": "Spotify Clone",
+    "description": "Clone of Music Website Spotify with API through which a user can play songs",
+    "githublink":"#",
+    "livelink":"https://spotify-clone-56.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
+    {
+    "projectimg": "project-img/news.png",
+    "projectname": "News homepage",
+    "description": "A Simple News Website Homepage containing links to other pages and a new section for the latest news",
+    "githublink":"https://github.com/realgautamjakhar/intro-section-with-dropdown-navigation-main",
+    "livelink":"https://intro-section-dropdown56.netlify.app/",
+    "tags":["HTML","CSS"]
+    },
+    {
+    "projectimg": "project-img/sunnyside.jpg",
+    "projectname": "Sunnyside agency landing page",
+    "description": " A simple Landing page containing a services section and testimonials from customers",
+    "githublink":"https://github.com/realgautamjakhar/sunnyside-agency-landing-page-main",
+    "livelink":"https://neon-parfait-b46ea0.netlify.app/",
+    "tags":["HTML","CSS","JS"]
+    },
     {
     "projectimg": "project-img/password-generator.png",
     "projectname": "Password Generator",

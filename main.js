@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${project.projectimg}">
     </div>
     <h3>${project.projectname}</h3>
-    <p>${project.description}</p>
+    <p class="project-para">${project.description}</p>
     <div class="tags">${projecttags(project.tags)}</div>
     <div class="buttons">
         <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
