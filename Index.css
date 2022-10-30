@@ -208,7 +208,7 @@ header {
 }
 
 .logo {
-    color: var(--text-color);
+    color: white;
     width: 100px;
     margin-left:2rem;
     margin-right:auto;
@@ -386,8 +386,9 @@ header nav > a:hover{
     outline: none;
 }
 #contact input:focus,textarea:focus{
-    background-color: rgba(var(--accent-color));
+    outline: 2px solid rgba(var(--accent-color));
 }
+
 .submit-btn{
     max-width: 150px;
     margin: auto;
@@ -431,5 +432,10 @@ footer {
         margin: auto;
         font-size: 3rem;
         height: min-content;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    #contact{
+        min-height: auto;
     }
 }

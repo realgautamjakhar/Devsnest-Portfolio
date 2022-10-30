@@ -85,7 +85,6 @@ function showheader(e){
   if(document.documentElement.scrollTop > 700){
     const headerElement = document.querySelector("header")
     const headerlinks = document.querySelectorAll("header a")
-    document.querySelector("header h2").style.setProperty("color","white")
     headerElement.style.setProperty("background-color","rgba(var(--accent-color),.9)")
     headerlinks.forEach(link => {
       link.style.setProperty("color","white")
@@ -93,11 +92,10 @@ function showheader(e){
   }else{
     const headerElement = document.querySelector("header")
     const headerlinks = document.querySelectorAll("header a")
-    document.querySelector("header h2").style.setProperty("color","black")
     headerElement.style.setProperty("background-color","revert")
     headerElement.style.setProperty("transition","all ease-in .5s")
     headerlinks.forEach(link => {
-      link.style.setProperty("color","black")
+      link.style.setProperty("color","var(--text-color)")
     })
   }
 }
