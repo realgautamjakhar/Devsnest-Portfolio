@@ -1,25 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
 .projects{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(auto,300px) 1fr;
     justify-content: center;
     min-height: 100vh;
+    /* gap: 2rem; */
     align-items: center;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
 }
-
+.section-heading-projects{
+    transform-box: fill-box;
+    transform: rotate(270deg);
+    font-size: var(--font-4xl);
+    color: var(--secondary-text-color);
+}
+.section-heading-projects:hover{
+    color: rgba(var(--accent-color));
+}
 /* SEARCH */
 .search{
-    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    padding-bottom: 1rem;
 }
 .search h4{
     padding: .5rem 1rem .5rem 1rem;
+    border-radius: 10px;
 }
 .search h4:hover{
     cursor: pointer;
@@ -27,120 +37,151 @@
 .notselectedoption{
     background-color: transparent;
     color: var(--text-color);
-    transition: all .5s;
+    transition: var(--default-transition);
 }
 .selectedoption{
-    background-color: #fb6c6d;
+    background-color: rgba(var(--accent-color));
     color: white;
-    transition: all .5s;
+    transition: var(--default-transition);
 }
+.projects-inner-section{
+    margin: auto;
+    width: min-content;
 
+}
 .cards-container{
     display: grid;
-    grid-template-columns: repeat(3,minmax(auto,300px));
-    gap: 3rem;
+    grid-template-columns: repeat(4,minmax(auto,300px));
+    gap: 1rem;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    transition: all .5s;
+    transition: var(--default-transition);
+    max-height: 70vh;
+    overflow-y: auto;
+    border: 2px solid rgba(var(--accent-color));
+    padding: 1rem;
+
 }
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: var(--shadow-box-background);
-    box-shadow: var(--shadow-box-box-shadow);
-    transition: all .5s;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
-.card:hover {
-    box-shadow: var(--box-shadow-hover);
-    transition: var(--hover-transition);
+.card:hover{
+    box-shadow: 0px 16px 20px -15px rgba(var(--accent-color));
+    transition: var(--default-transition);
 }
+
 .card p,h3{
     margin: 0;
     text-align: center;
-    margin-top: 1rem;
 }
+
 .card p {
-    opacity: 70%;
+    color: var(--secondary-text-color);
     margin-top: 0;
     font-size: .8rem;
-    line-clamp: 2;
 }
 
-.img-div {
-    width: auto;
-    border-radius: .5rem;
-    box-shadow: 0px 15px 18px 6px rgba(0,0,0,0.1);
-}
-.img-div img {
+.card img {
     max-width:100%;
-    display: block;
-    margin: auto;
-    max-height:100%;
+    height: 150px;
     border-radius: .5rem;
-} 
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin-top: 1rem;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(var(--accent-color));
+}
 
+.project-para {
+    max-height: 75px;
+    overflow: auto;
+}
+.project-para::-webkit-scrollbar{
+    display: none;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
 }
 
 .githubbtn {
     background-color: transparent;
     border: none;
-    text-transform: uppercase;
     padding: .5rem 2rem .5rem 2rem;
-}
-.livebtn {
-    background-color: var(--accent-color);
-    border: none;
-    color: white;
-    border-radius: 50px;
     text-transform: uppercase;
-    font-weight: 700;
-    padding: .7rem 2rem .7rem 2rem;
 }
-.githubbtn:hover,.livebtn:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: all .5s;
+.livebtn a {
+    color: white;
 }
-
 .githubbtn a {
-    text-decoration: none;
     color: var(--text-color);
 }
-.livebtn a{
-    text-decoration: none;
-    color: white;
-}
-.tags {
-    margin-top: 1rem;
+.project-buttons a {
     display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.livebtn {
+    background-color: rgba(var(--accent-color));
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 8px 16px 8px 16px;
+    text-transform: uppercase;
+    
+}
+
+
+
+.project-buttons a:hover{
+    color: rgba(var(--accent-color));
+    transition: var(--default-transition);
+}
+.livebtn:hover , .tags p:hover{
+    cursor: pointer;
+    background-color: transparent;
+    outline: 1px solid rgba(var(--accent-color));
+    transition: var(--default-transition);
+}
+
+.tags {
+    display: flex;
+    color: var(--text-color);
+    gap: 1rem;
 }
 .tags p{
-    background-color: #fb6c6d;
-    color: white;
-    font-size: .7rem;
-    padding: .25rem .7rem .25rem .7rem;
-    margin-right: .5rem;
+    background-color: rgba(var(--accent-color));
+    padding: .25rem .5rem .25rem .5rem;
     border-radius: 5px;
-}
-.tags p:last-child{
-    margin-right: revert;
+    color: white;
 }
 
 /* Media Queries */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1300px) {
     .cards-container{
         display: grid;
         grid-template-columns: repeat(2,minmax(auto,300px));
-        gap: 2rem;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1000px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(auto,300px));
+        gap: 1rem;
         justify-content: center;
         align-items: center;
     }
@@ -149,15 +190,26 @@
     .cards-container{
         display: grid;
         grid-template-columns: repeat(1,minmax(auto,300px));
-        gap: 2rem;
+        gap: 1rem;
         justify-content: center;
         align-items: center;
     }
-}
-
-@media screen and (min-width:1200px) {
-    .cards-container{
+    .section-heading-projects{
+        transform: revert;
+        align-self: center;
+        margin: auto;
+        font-size: 3rem;
+        height: min-content;
+    }
+    .projects{
         display: grid;
-        grid-template-columns: repeat(4,minmax(auto,300px));
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 2rem;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-color);
     }
 }

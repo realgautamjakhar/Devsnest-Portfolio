@@ -56,42 +56,61 @@ function projecttags(tags){
     return valuetags
 }
 
+const onscroll = (e) => {
+  console.log(e);
+}
+function showmenu() {
+  const menu = document.querySelector("section.menu");
+  menu.style.height = "100%";
+  menu.style.width = "100%";
+}
+function closemenu() {
+  const menu = document.querySelector("section.menu");
+  menu.style.height = "0%";
+}
+function addclickToMenuItems() {
+  const menuItems = document.querySelectorAll("section.menu nav ul>li");
+  for (let menuItem of menuItems) {
+    menuItem.addEventListener("click", closemenu);
+  }
+}
+function scrolltop(){
+  document.body.scrollTop = 0; //for safari
+  document.documentElement.scrollTop = 0; //for chrome windows
+}
+function scrollpage(){
+  document.getElementById("about-me").scrollIntoView();
+}
+function showheader(e){
+  console.log(document.documentElement.scrollTop);
+  if(document.documentElement.scrollTop > 700){
+    const headerElement = document.querySelector("header")
+    const headerlinks = document.querySelectorAll("header a")
+    document.querySelector("header h2").style.setProperty("color","white")
+    headerElement.style.setProperty("background-color","rgba(var(--accent-color),.9)")
+    headerlinks.forEach(link => {
+      link.style.setProperty("color","white")
+    })
+  }else{
+    const headerElement = document.querySelector("header")
+    const headerlinks = document.querySelectorAll("header a")
+    document.querySelector("header h2").style.setProperty("color","black")
+    headerElement.style.setProperty("background-color","revert")
+    headerElement.style.setProperty("transition","all ease-in .5s")
+    headerlinks.forEach(link => {
+      link.style.setProperty("color","black")
+    })
+  }
+}
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",() => {
   document.getElementById("menu-btn").addEventListener("click", showmenu);
-  function showmenu() {
-    const menu = document.querySelector("section.menu");
-    menu.style.height = "100%";
-    menu.style.width = "100%";
-  }
-
   document.getElementById("close-btn").addEventListener("click", closemenu);
-
-  function closemenu() {
-    const menu = document.querySelector("section.menu");
-    menu.style.height = "0%";
-  }
-  function addclickToMenuItems() {
-    const menuItems = document.querySelectorAll("section.menu nav ul>li");
-    for (let menuItem of menuItems) {
-      menuItem.addEventListener("click", closemenu);
-    }
-  }
   addclickToMenuItems();
-
   document.querySelector(".logo").addEventListener("click",scrolltop)
-  function scrolltop(){
-    document.body.scrollTop = 0; //for safari
-    document.documentElement.scrollTop = 0; //for chrome windows
-  }
   document.querySelector(".downicon").addEventListener("click",scrollpage)
-  function scrollpage(){
-    document.documentElement.scrollBy(0,740);
-  }
-
+  
+  window.addEventListener("scroll",(e)=>showheader(e))
   const day = document.getElementById("day");
   const night = document.getElementById("night");
   var r = document.querySelector(':root');
@@ -100,20 +119,20 @@ document.addEventListener("DOMContentLoaded", function () {
   night.addEventListener("click",nightmode)
   
   function daymode(){
-    r.style.setProperty("--bg-color","#ffffff")
-    r.style.setProperty("--text-color","black")
-    r.style.setProperty("--shadow-box-background","#ffffff")
-    r.style.setProperty("--shadow-box-box-shadow","5px 5px 16px #e6e6e6,-5px -5px 16px #ffffff")
-    r.style.setProperty("--box-shadow-hover","5px 5px 16px #fb6c6d,-5px -5px 16px #ffffff")
+    r.style.setProperty("--bg-color","rgb(240, 240, 240)")
+    r.style.setProperty("--text-color","rgb(0, 0, 0)")
+    r.style.setProperty("--accent-color","100, 85, 255")
+    r.style.setProperty("--secondary-text-color","rgba(0, 0, 0, 0.75)")
+    r.style.setProperty("--card-bg","rgb(250, 250, 250)")
     r.style.setProperty("--day-icon","none")
     r.style.setProperty("--night-icon","revert")
   }
   function nightmode(){
-    r.style.setProperty("--bg-color","#232325")
-    r.style.setProperty("--text-color","white")
-    r.style.setProperty("--shadow-box-background","#232325")
-    r.style.setProperty("--shadow-box-box-shadow","5px 5px 16px #202021,-5px -5px 16px #272729")
-    r.style.setProperty("--box-shadow-hover","5px 5px 16px #fb6c6d,-5px -5px 16px #363639")
+    r.style.setProperty("--bg-color","rgba(0,0,0,.9)")
+    r.style.setProperty("--text-color","rgb(255, 255, 255)")
+    r.style.setProperty("--accent-color","100, 85, 255")
+    r.style.setProperty("--secondary-text-color","hsla(0,0%,100%,.75")
+    r.style.setProperty("--card-bg","#282828")
     r.style.setProperty("--day-icon","revert")
     r.style.setProperty("--night-icon","none")
   }
@@ -121,18 +140,17 @@ document.addEventListener("DOMContentLoaded", function () {
   //serach fcuntion
   projects.forEach(project => {
     const contain = 
-    `<div class="card">
-    <div class="img-div">
-        <img src="${project.projectimg}">
-    </div>
+    `<div class="card" id="project-card">
+    <img src="${project.projectimg}">
     <h3>${project.projectname}</h3>
     <p class="project-para">${project.description}</p>
     <div class="tags">${projecttags(project.tags)}</div>
-    <div class="buttons">
-        <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
-        <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i> live</a></button>
+    <div class="project-buttons">
+        <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i>Github</a></button>
+        <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i>live</a></button>
     </div>
     </div>`
+    
     allprojects += contain
     container.innerHTML += contain
     });
@@ -147,21 +165,18 @@ document.addEventListener("DOMContentLoaded", function () {
           container.innerHTML = ""
           e.target.classList.remove("notselectedoption")
           e.target.classList.add("selectedoption")
-
           projects.forEach(project => {
               project.tags.forEach(tag =>{
                   if(tag === tagvalue){
                       const contain = 
-                                      `<div class="card">
-                                      <div class="img-div">
-                                          <img src="${project.projectimg}">
-                                      </div>
+                                      `<div class="card" id="project-card">
+                                      <img src="${project.projectimg}">
                                       <h3>${project.projectname}</h3>
-                                      <p>${project.description}</p>
+                                      <p class="project-para">${project.description}</p>
                                       <div class="tags">${projecttags(project.tags)}</div>
-                                      <div class="buttons">
-                                          <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
-                                          <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i> live</a></button>
+                                      <div class="project-buttons">
+                                          <button class="githubbtn"><a href="${project.githublink}" target="_blank"><i class="fa-brands fa-github"></i>Github</a></button>
+                                          <button class="livebtn"><a href="${project.livelink}" target="_blank"><i class="fa-solid fa-globe"></i>live</a></button>
                                       </div>
                                       </div>`
                                       container.innerHTML += contain
@@ -172,5 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
           })
       })
     })
+
 
 });

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="projects.css">
   </head>
   <body>
-    <div class="container">
       <section class="modes">
         <i id="day" class="fa-sharp fa-solid fa-sun"></i>
         <i id="night" class="fa-sharp fa-solid fa-moon"></i>
@@ -26,111 +25,128 @@
             <li><a href="#qualifications">Qualification</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </section>
       <header>
-        <div class="logo"><h2><span style="color:#fb6c6d; font-size: larger;">G</span>autam.</h2></div>
+        <div class="logo"><h2><span style="font-size: larger;">G</span>autam.</h2></div>
         <nav class="default-nav">
           <a href="#about-me">Abouts</a>
           <a href="#qualifications">Qualification</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#hobbies">Hobbies</a>
           <a href="#contact">Contact</a>
         </nav>
         <nav class="mobile-nav">
           <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
         </nav>
       </header>
-      <div class="intro flex-center" id="intro">
-        <img id="profile-img" src="images/profile.jpg" />
-        <h1>Hi, I'm Gautam</h1>
-
-        <p>I m <span id="dynamic-text" class="dynamic-text"></span></p>
-
-        <p class="socials-links">
-          <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
-            <i class="fa-solid fa-globe icons"></i></a>
-          <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
-            <i class="fa-brands fa-instagram icons"></i></a>
-          <a href="https://github.com/realgautamjakhar" target="_blank">
-            <i class="fa-brands fa-github icons"></i></a>
-          <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
-            <i class="fa-brands fa-facebook icons"></i></a>
-          <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">   
-            <i class="fa-brands fa-linkedin icons"></i></a>
-
-        </p>
-        <p><i class="fa-solid fa-down-long downicon"></i></p>
+      
+      <div class="intro" id="intro">
+        <section class="intro-text">
+          <section class="text">
+            <span>👋</span>
+            <div>
+              <h3>Hi,</h3>
+              <h2>I'm Gautam</h2>
+            </div>
+          </section>
+          <p>I m <span id="dynamic-text" class="dynamic-text"></span></p>
+          <p><i class="fa-solid fa-down-long downicon"></i></p>
+        </section>
+        <section class="intro-img">
+          <img id="profile-img" src="images/profile.jpg" />
+          <p class="socials-links">
+            <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
+              <i class="fa-solid fa-globe icons"></i></a>
+            <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
+              <i class="fa-brands fa-instagram icons"></i></a>
+            <a href="https://github.com/realgautamjakhar" target="_blank">
+              <i class="fa-brands fa-github icons"></i></a>
+            <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">
+              <i class="fa-brands fa-facebook icons"></i></a>
+            <a href="https://www.linkedin.com/in/gautam-jakhar/" target="_blank">   
+              <i class="fa-brands fa-linkedin icons"></i></a>
+          </p>
+        </section>
       </div>
 
-      <div id="about-me" class="flex-center">
-        <img class="top-img" src="images/about-me.svg" />
-        <h2 class="section-heading">About ME</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
-          nisi neque deleniti vitae tenetur perspiciatis, officia, quas impedit
-          dicta nesciunt labore sequi doloremque. Delectus ab quo eius,
-          accusamus laboriosam voluptate.
-        </p>
+
+      <div id="about-me">
+        <h2 class="section-heading" >AboutME</h2>
+        <section class="about-me-content">
+          <p>I'm a self-motivated, enthusiastic individual who loves technology.
+            <br>
+            I have hand-on self-experience in full-stack web development technologies such as ReactJS, NodeJs, and Javascript.</p>
+       </section>
       </div>
       <section class="qualification" id="qualifications">
-        <img class="top-img" src="images/study.svg" />
-        <h1>Qualification</h1>
-        <div class="qualification-cards">
-            <div class="schooling">
-                <h2 class="line-icon-flex" style="align-self: center;"><i class="fa-sharp fa-solid fa-book-skull"></i>Schooling</h2>
-                <div class="schooling-card">
-                    <h5>Till 2018</h5>
-                    <div class="line-icon-flex">
-                        <i class="fa-solid fa-school qualifications-icons"></i>
-                        <h3>School</h3>
-                    </div>
-                    <h3>ST. MARY SR SEC SCHOOL-SIKAR</h3>
-                    <p>Class X - 84% ICSE Class XI 70% ISC</p>
-                </div>
-                <div class="schooling-card">
-                    <h5>2018 - 2021</h5>
-                    <div class="line-icon-flex">
-                        <i class="fa-solid fa-graduation-cap qualifications-icons"></i>
-                        <h3>College - Bechlores</h3>
-                    </div>
-                    <h3>Rajasthan University</h3>
-                    <p>Affl. Poddar International College -Jaipur</p>
-                    <p>ABOVE 82% EVERY SEM</p>
-                </div>
-                <div class="schooling-card">
-                    <h5>2021 - Present</h5>
-                    <div class="line-icon-flex">
-                        <i class="fa-solid fa-building-columns qualifications-icons"></i>
-                        <h3>College - Masters</h3>
-                    </div>
-                    <h3>Rajasthan Technical University</h3>
-                    <p>Affl. Poddar International College -Jaipur</p>
-                    <p>9+ CGPA</p>
-                </div>
+        <h2 class="section-heading-qualification">Qualification</h2>
+        <section class="qualification-cards">
+          <section class="qualification-card study">
+            <h2>Study</h2>
+            <article class="schooling">
+              <h5 class="study-time">Till 2018</h5>
+              <article>
+                <h3>School</h3>
+                <h4>ST. MARY SR SEC SCHOOL-SIKAR</h4>
+                <h5>-----</h5>
+                <p>Class X - 84% ICSE, Class XII 70% ISC</p>
+              </article>
+            </article>
+            <article article class="schooling">
+              <h5 class="study-time">2018 - 2021</h5>
+              <article>
+                <h3>College - Bechlores</h3>
+                <h4>Rajasthan University</h4>
+                <h5>Affl. Poddar International College -Jaipur</h5>
+                <p>Class X - 84% ICSE, Class XII 70% ISC</p>
+              </article>
+            </article>
+            <article article class="schooling">
+              <h5 class="study-time">2018 - 2021</h5>
+              <article>
+                <h3>College - Bechlores</h3>
+                <h4>Rajasthan University</h4>
+                <h5>Affl. Poddar International College -Jaipur</h5>
+                <p>Class X - 84% ICSE, Class XII 70% ISC</p>
+              </article>
+            </article>
+          </section>
+          <section class="qualification-card certificate">
+            <div class="certificate-card">
+              <img src="logos/devsnest.png" class="logos" title="Devsnest Full stack Webdevelopment">
+              <section>
+                <h3>Devsnest BootCamp</h3>
+                <p>Full Stack Web Development Bootcamp</p>
+              </section>
             </div>
-            <div class="certificate-cards">
-                <h3 class="line-icon-flex"><i class="fa-solid fa-certificate"></i>Certification</h3>
-                <div class="certificate-logo">
-                    <img src="logos/devsnest.png" class="logos" title="Devsnest Full stack Webdevelopment">
-                    <img src="logos/download.png" class="logos" title="Almabetter Web 3 Full Stack Webdevelopment">
-                    <img src="logos/ibm.png" class="logos" title="IBM Full stack Cloud Development">    
-                </div>
+            <div class="certificate-card">
+              <img src="logos/download.png" class="logos" title="Almabetter Web 3 Full Stack Webdevelopment">
+              <section>
+                <h3>AlmaBetter BootCamp</h3>
+                <p>Full Stack Web Development with Web3</p>
+              </section>
             </div>
-            <div class="unknown-cards">
-                <h3 class="line-icon-flex"><i class="fa-sharp fa-solid fa-file"></i>Resume</h3>
-                <button class="resume-btn">Download Resume</button>
+            <div class="certificate-card">
+              <img src="logos/ibm.png" class="logos" title="IBM Full stack Cloud Development">    
+              <section>
+                <h3>IBM </h3>
+                <p>Full Stack Software Developer Professional Certificate</p>
+              </section>
             </div>
-        </div>
+          </section>
+          <section class="qualification-card resume">
+            <h2>Resume</h2>
+          </section>
+        </section>
+
+
+        
     </section>
       <section class="skills" id="skills">
-        <img class="top-img" src="images/skills.svg" />
-        <h1>TECHNOLOGIES SKILLS</h1>
-        <p>Technologies on which i worked</p>
+        <h2 class="section-heading">Skills</h2>
         <div class="tiles">
             <div class="html" title="HTML"></div>
             <div class="css" title="CSS"></div>
@@ -146,46 +162,40 @@
             <div class="git" title="Git"></div>
         </div>
     </section>
+      
       <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="search">
-            <h4 class="option selectedoption">ALL</h4>
-            <h4 class="option notselectedoption">JS</h4>
-            <h4 class="option notselectedoption">HTML</h4>
-            <h4 class="option notselectedoption">CSS</h4>
-            <h4 class="option notselectedoption">REACT</h4>
-        </div>
-        <div class="cards-container">
-        </div>
+        <h2 class="section-heading">Projects</h2>
+        <section class="projects-inner-section" >
+          <div class="search">
+              <h4 class="option selectedoption">ALL</h4>
+              <h4 class="option notselectedoption">JS</h4>
+              <h4 class="option notselectedoption">HTML</h4>
+              <h4 class="option notselectedoption">CSS</h4>
+              <h4 class="option notselectedoption">REACT</h4>
+          </div>
+          <div class="cards-container">
+          </div>
+        </section>
       </section>
-      <div id="hobbies" class="flex-center hobbies">
-        <img class="top-img" src="images/hobby.svg" />
-        <h2 class="section-heading">Hobbies</h2>
-        <ul>
-          <li ><i class="fa-sharp fa-solid fa-gamepad"> VideoGames</i></li>
-          <li ><i class="fa-sharp fa-solid fa-code"> Coding</i></li>
-          <li ><i class="fa-sharp fa-solid fa-video"> Watching Movies</i></li>
-        </ul>
-      </div>
 
       <div id="contact" class="flex-center">
-        <img class="top-img" src="images/contact.svg" />
         <h2 class="section-heading"> Contact Me</h2>
-        <p>Drop a message</p>
-        <form method="POST" data-netlify="true" >
-          <label for="fname">First Name: </label>
-          <input type="text" id="fanme" name="fname">
-          <label for="lname">last Name:</label>
-          <input type="text" id="lname" name="lname">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="10"  cols="10"></textarea>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
+        <section>
+          <p>Drop a message</p>
+          <form method="POST" data-netlify="true" >
+            <label for="fname">First Name: </label>
+            <input type="text" id="fanme" name="fname">
+            <label for="lname">last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"  cols="auto"></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </section>
       </div>
       <footer>
         MADE WITH ❤️
       </footer>
-    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>
