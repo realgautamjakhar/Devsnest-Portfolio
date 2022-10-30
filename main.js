@@ -82,7 +82,6 @@ function scrollpage(){
   document.getElementById("about-me").scrollIntoView();
 }
 function showheader(e){
-  console.log(document.documentElement.scrollTop);
   if(document.documentElement.scrollTop > 700){
     const headerElement = document.querySelector("header")
     const headerlinks = document.querySelectorAll("header a")
