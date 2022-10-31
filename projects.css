@@ -143,6 +143,7 @@
 }
 .livebtn:hover , .tags p:hover{
     cursor: pointer;
+    color: rgba(var(--accent-color));
     background-color: transparent;
     outline: 1px solid rgba(var(--accent-color));
     transition: var(--default-transition);
@@ -156,7 +157,8 @@
 .tags p{
     background-color: rgba(var(--accent-color));
     padding: .25rem .5rem .25rem .5rem;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 10px;
     color: white;
 }
 

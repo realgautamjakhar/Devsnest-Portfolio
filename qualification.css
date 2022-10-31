@@ -19,6 +19,7 @@
     font-size: var(--font-4xl);
 }
 .section-heading-qualification:hover{
+    cursor: pointer;
     color: rgba(var(--accent-color));
     transition: var(--default-transition);
 }
