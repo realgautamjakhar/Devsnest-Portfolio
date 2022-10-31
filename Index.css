@@ -313,11 +313,14 @@ header nav > a:hover{
     font-size: 5rem;
     transform: rotate(270deg);
     color: var(--secondary-text-color);
+    
 }
 
 .section-heading:hover{
     cursor: pointer;
     color: rgba(var(--accent-color));
+    text-decoration: underline;
+    transition: var(--default-transition);
 }
 
 /* About Page */
@@ -367,6 +370,7 @@ header nav > a:hover{
 #contact h4{
     text-transform: uppercase;
     font-size: var(--font-l);
+    color: var(--secondary-text-color);
 }
 
 #contact form input,textarea {

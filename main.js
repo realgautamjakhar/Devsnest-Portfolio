@@ -1,6 +1,6 @@
 import projects from './projects.json' assert {type: 'json'};
 const dynamicContent = document.getElementById("dynamic-text");
-const phrases = ["Software Engineer...", "WebDeveloper..."];
+const phrases = ["MERN Developer...","Web3 Dev...","Software Dev..."];
 
 let phraseIndex = 0;
 let letterIndex = 0;
