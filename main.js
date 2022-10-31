@@ -42,11 +42,6 @@ printletters(phrases[phraseIndex]);
 const options = document.querySelectorAll(".option")
 const container = document.querySelector(".cards-container")
 let allprojects = "";
-options.forEach(option =>{
-    option.addEventListener("click",()=>{
-        console.log(option);
-    })
-})
 function projecttags(tags){
     let valuetags ="";
     tags.forEach(tag=>{
@@ -56,9 +51,6 @@ function projecttags(tags){
     return valuetags
 }
 
-const onscroll = (e) => {
-  console.log(e);
-}
 function showmenu() {
   const menu = document.querySelector("section.menu");
   menu.style.height = "100%";
