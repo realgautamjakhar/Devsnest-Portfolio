@@ -346,31 +346,18 @@ header nav > a:hover{
     min-height: 100vh;
     align-items: center;
 }
-.section-heading-contactme {
-    justify-content: center;
-    font-size: 5rem;
-    /* transform-origin: 50% 50% ; */
-    transform: rotate(270deg);
-    color: var(--secondary-text-color);
 
-}
-
-.section-heading-contactme:hover{
-    color: rgba(var(--accent-color));
-    transition: var(--default-transition);
-}
 #contact section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    flex-wrap: wrap;
 }
 #contact form{
-    margin: auto;
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: auto;
 }
 #contact label{
     text-align: start;
@@ -379,7 +366,7 @@ header nav > a:hover{
 }
 #contact h4{
     text-transform: uppercase;
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
 }
 
 #contact form input,textarea {
@@ -444,8 +431,5 @@ footer {
         height: min-content;
         padding-top: 3rem;
         padding-bottom: 1rem;
-    }
-    #contact{
-        min-height: auto;
     }
 }
