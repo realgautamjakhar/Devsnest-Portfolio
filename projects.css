@@ -5,20 +5,12 @@
     grid-template-columns: minmax(auto,300px) 1fr;
     justify-content: center;
     min-height: 100vh;
-    /* gap: 2rem; */
     align-items: center;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
+    margin: 1rem;
 }
-.section-heading-projects{
-    transform-box: fill-box;
-    transform: rotate(270deg);
-    font-size: var(--font-4xl);
-    color: var(--secondary-text-color);
-}
-.section-heading-projects:hover{
-    color: rgba(var(--accent-color));
-}
+
 /* SEARCH */
 .search{
     display: flex;
@@ -45,9 +37,10 @@
     transition: var(--default-transition);
 }
 .projects-inner-section{
-    margin: auto;
-    width: min-content;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .cards-container{
     display: grid;

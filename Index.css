@@ -372,7 +372,7 @@ header nav > a:hover{
 #contact form input,textarea {
     border: none;
     background-color: var(--card-bg);
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 1rem;
     font-size: 1rem;
     color:var(--text-color);
@@ -380,7 +380,7 @@ header nav > a:hover{
     outline: none;
 }
 #contact form{
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 #contact input:focus,textarea:focus{
     outline: 2px solid rgba(var(--accent-color));
