@@ -51,7 +51,8 @@
     transition: var(--default-transition);
     max-height: 70vh;
     overflow-y: auto;
-    border: 2px solid rgba(var(--accent-color));
+    border-left: 2px solid rgba(var(--accent-color));
+    border-bottom: 2px solid rgba(var(--accent-color));
     padding: 1rem;
 
 }
@@ -188,6 +189,7 @@
         gap: 1rem;
         justify-content: center;
         align-items: center;
+        border-left:revert;
     }
     .section-heading-projects{
         transform: revert;
