@@ -40,6 +40,9 @@
     background: rgba(var(--accent-color));
     border-radius: 50px;
 }
+::-webkit-scrollbar-thumb:active{
+    background: var(--secondary-text-color);
+}
 
 body {
     margin: 0;
