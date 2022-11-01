@@ -92,6 +92,15 @@ function showheader(e){
   }
 }
 
+function sectionHeadingClick(e){
+  console.log(e);
+  e.target.classList.add("animate-heading")
+  const removeAnimationHeading = () => {
+    e.target.classList.remove("animate-heading")
+  }
+  setTimeout(removeAnimationHeading,2000)
+}
+
 document.addEventListener("DOMContentLoaded",() => {
   document.getElementById("menu-btn").addEventListener("click", showmenu);
   document.getElementById("close-btn").addEventListener("click", closemenu);
@@ -106,7 +115,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
   day.addEventListener("click",daymode)
   night.addEventListener("click",nightmode)
-  
+  const sectionHeading = document.querySelectorAll(".section-heading")
+  sectionHeading.forEach(section => section.addEventListener("click",() => sectionHeadingClick(event)))
   function daymode(){
     r.style.setProperty("--bg-color","rgb(240, 240, 240)")
     r.style.setProperty("--text-color","rgb(0, 0, 0)")

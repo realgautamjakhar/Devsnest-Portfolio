@@ -60,6 +60,8 @@ body {
     text-transform: uppercase;
     color: var(--text-color);
 }
+
+
 p{  
     color: var(--text-color);
     font-size: var(--font-regular);
@@ -331,7 +333,37 @@ header nav > a:hover{
     color: rgba(var(--accent-color));
     transition: var(--default-transition);
 }
+.animate-heading{
+    -webkit-animation: slide-out-fwd-top 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-fwd-top 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
 
+ @-webkit-keyframes slide-out-fwd-top {
+    0% {
+      -webkit-transform: translateZ(1) translateY(0);
+              transform: translateZ(1) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(600px) translateY(-300px);
+              transform: translateZ(600px) translateY(-300px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-fwd-top {
+    0% {
+      -webkit-transform: translateZ(1) translateY(0);
+              transform: translateZ(1) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(600px) translateY(-300px);
+              transform: translateZ(600px) translateY(-300px);
+      opacity: 0;
+    }
+  }
+  
+  
 /* About Page */
 #about-me{
     display: grid;
@@ -442,6 +474,6 @@ footer {
         font-size: 3rem;
         height: min-content;
         padding-top: 3rem;
-        padding-bottom: 1rem;
+        padding-bottom: revert;
     }
 }

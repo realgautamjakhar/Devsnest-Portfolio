@@ -15,26 +15,37 @@
 .search{
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 2;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 50px;
+    margin-bottom: 2rem;
 }
 .search h4{
-    padding: .5rem 1rem .5rem 1rem;
-    border-radius: 10px;
+    font-size: 1rem;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    border-radius: 50px;
 }
+
 .search h4:hover{
     cursor: pointer;
+    box-shadow: 0px 16px 20px -15px rgba(var(--accent-color));
 }
+
 .notselectedoption{
-    background-color: transparent;
+    background-color: var(--bg-color);
     color: var(--text-color);
     transition: var(--default-transition);
+    
 }
 .selectedoption{
     background-color: rgba(var(--accent-color));
     color: white;
     transition: var(--default-transition);
+    box-shadow: 0px 16px 20px -15px rgba(var(--accent-color));
 }
 .projects-inner-section{
     display: flex;
@@ -51,15 +62,13 @@
     transition: var(--default-transition);
     max-height: 70vh;
     overflow-y: auto;
-    border-left: 2px solid rgba(var(--accent-color));
-    border-bottom: 2px solid rgba(var(--accent-color));
     padding: 1rem;
-
 }
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -67,36 +76,52 @@
     color: var(--text-color);
 }
 .card:hover{
+    transform: scale(1.02);
     box-shadow: 0px 16px 20px -15px rgba(var(--accent-color));
     transition: var(--default-transition);
 }
-
 .card p,h3{
     margin: 0;
     text-align: center;
 }
 
-.card p {
+.card  p {
     color: var(--secondary-text-color);
     margin-top: 0;
-    font-size: .8rem;
+    font-size: .8rem;  
 }
 
 .card img {
     max-width:100%;
-    height: 150px;
+    height: 9rem;
     border-radius: .5rem;
     object-fit: cover;
-    border-bottom: 1px solid rgba(var(--accent-color));
+    
 }
-
-.project-para {
-    max-height: 75px;
+.card > h3 {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.card > h3:hover {
+    cursor: pointer;
+    width: revert;
+    white-space: revert;
+    text-overflow: revert;
+    max-height:1.8rem;
     overflow: auto;
 }
-.project-para::-webkit-scrollbar{
+.project-para {
+    height: 2.2rem;
+    width: 100%;
+    overflow: auto;
+}
+
+.project-para::-webkit-scrollbar,.card > h3:hover::-webkit-scrollbar{
     display: none;
 }
+
 
 .project-buttons {
     display: flex;
@@ -107,10 +132,12 @@
 
 .githubbtn {
     background-color: transparent;
+    width: 50%;
     border: none;
     padding: .5rem 2rem .5rem 2rem;
     text-transform: uppercase;
 }
+
 .livebtn a {
     color: white;
 }
@@ -129,14 +156,11 @@
 .livebtn {
     background-color: rgba(var(--accent-color));
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 1rem;
-    padding: 8px 16px 8px 16px;
+    padding: .5rem 1rem .5rem 1rem;
     text-transform: uppercase;
-    
 }
-
-
 
 .project-buttons a:hover{
     color: rgba(var(--accent-color));
@@ -148,6 +172,11 @@
     background-color: transparent;
     outline: 1px solid rgba(var(--accent-color));
     transition: var(--default-transition);
+    box-shadow: 0px 16px 20px -10px rgba(var(--accent-color));
+}
+.livebtn:hover a{
+    color: rgba(var(--accent-color));
+
 }
 
 .tags {
@@ -156,11 +185,12 @@
     gap: 1rem;
 }
 .tags p{
-    background-color: rgba(var(--accent-color));
-    padding: .25rem .5rem .25rem .5rem;
-    border-radius: 10px;
+    background-color: rgba(var(--accent-color),.5);
+    padding: .25rem .75rem .25rem .75rem;
+    border-radius: 50px;
     font-size: 10px;
     color: white;
+    
 }
 
 /* Media Queries */
@@ -189,7 +219,6 @@
         gap: 1rem;
         justify-content: center;
         align-items: center;
-        border-left:revert;
     }
     .section-heading-projects{
         transform: revert;
@@ -211,4 +240,13 @@
         font-family: 'Poppins', sans-serif;
         color: var(--text-color);
     }
+
+    .search{
+        gap: .75rem;
+    }
+    .search h4{
+        font-size: .8rem;
+        padding: .25rem .75rem .25rem .75rem;
+    }
+
 }
