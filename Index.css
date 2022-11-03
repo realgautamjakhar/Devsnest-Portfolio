@@ -113,6 +113,7 @@ p{
     background: #6455ff;
     box-shadow:  16px 16px 32px #4d41c4,
                 -16px -16px 32px #7b69ff;
+
 }
 .intro-text .text h2 {
     margin: 0;
@@ -202,6 +203,7 @@ header {
     height: 4rem;
     position: fixed;
     z-index: 1;
+
 }
 
 .modes{

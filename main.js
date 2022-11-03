@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded",() => {
   document.querySelector(".logo").addEventListener("click",scrolltop)
   document.querySelector(".downicon").addEventListener("click",scrollpage)
   
-  window.addEventListener("scroll",(e)=>showheader(e))
+  // window.addEventListener("scroll",(e)=>showheader(e))
   const day = document.getElementById("day");
   const night = document.getElementById("night");
   var r = document.querySelector(':root');
